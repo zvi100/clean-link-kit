@@ -112,6 +112,8 @@ Then load `apps/extension/dist` in Chrome:
 
 - Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 - Read [SECURITY.md](SECURITY.md) before reporting a security issue.
+- Read [docs/architecture.md](docs/architecture.md) to understand how the project is split.
+- Read [docs/release.md](docs/release.md) before publishing a release.
 - See [ROADMAP.md](ROADMAP.md) for planned and intentionally out-of-scope work.
 
 ## License
