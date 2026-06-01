@@ -112,7 +112,7 @@ Then load `apps/extension/dist` in Chrome:
 - Add Firefox manifest support
 - Add import/export for custom rules
 - Improve accessibility checks
-- Add a public demo deployment
+- Improve the public demo experience
 
 ## Community
 
