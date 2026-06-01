@@ -107,7 +107,6 @@ Then load `apps/extension/dist` in Chrome:
 - Add Firefox manifest support
 - Add import/export for custom rules
 - Improve accessibility checks
-- Add screenshots to this README
 - Add a public demo deployment
 
 ## Community
