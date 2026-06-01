@@ -28,6 +28,8 @@ The web app is published with GitHub Pages:
 
 https://zvi100.github.io/clean-link-kit/
 
+![Clean Link Kit web app](assets/screenshots/web-app.png)
+
 ## Features
 
 - Remove UTM parameters
