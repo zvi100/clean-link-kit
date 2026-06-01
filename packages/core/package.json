@@ -1,0 +1,40 @@
+{
+  "name": "@clean-link-kit/core",
+  "version": "0.1.0",
+  "description": "Core TypeScript URL cleaner for removing tracking parameters safely.",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run --coverage=false",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "url",
+    "utm",
+    "privacy",
+    "tracking",
+    "typescript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.3.6",
+    "typescript": "^5.8.3",
+    "vitest": "3.0.8"
+  }
+}
