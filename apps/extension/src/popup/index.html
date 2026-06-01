@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clean Link Kit</title>
+    <script type="module" src="./popup.ts"></script>
+  </head>
+  <body>
+    <main class="popup-shell">
+      <div class="brand">
+        <div class="brand-mark">CL</div>
+        <div>
+          <h1>Clean Link Kit</h1>
+          <p>Clean links before sharing.</p>
+        </div>
+      </div>
+
+      <label for="url">URL</label>
+      <textarea id="url" rows="5" spellcheck="false" placeholder="Paste a link"></textarea>
+
+      <div class="actions">
+        <button id="clean" type="button">Clean</button>
+        <button id="copy" type="button" disabled>Copy</button>
+      </div>
+
+      <section class="result-card">
+        <span id="status">Paste a URL to start.</span>
+        <p id="result"></p>
+      </section>
+
+      <section>
+        <h2>Removed</h2>
+        <ul id="removed"></ul>
+      </section>
+    </main>
+  </body>
+</html>

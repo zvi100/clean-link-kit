@@ -1,0 +1,166 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #020617;
+  color: #0f172a;
+}
+
+body {
+  margin: 0;
+  min-width: 360px;
+  background: #f8fafc;
+}
+
+.popup-shell {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  background: #020617;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+h2,
+label {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+p,
+span,
+li {
+  font-size: 12px;
+  color: #64748b;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  resize: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 12px;
+  background: #ffffff;
+  color: #0f172a;
+  font: 12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 4px rgba(148, 163, 184, 0.24);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 16px;
+  padding: 11px 12px;
+  background: #020617;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+button + button {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.result-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+#result {
+  word-break: break-all;
+  font: 12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #0f172a;
+}
+
+ul {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #020617;
+    color: #f8fafc;
+  }
+
+  textarea,
+  .result-card,
+  li,
+  button + button {
+    border-color: #1e293b;
+    background: #0f172a;
+    color: #f8fafc;
+  }
+
+  #result {
+    color: #f8fafc;
+  }
+
+  p,
+  span,
+  li {
+    color: #cbd5e1;
+  }
+
+  .brand-mark,
+  button {
+    background: #f8fafc;
+    color: #020617;
+  }
+}
