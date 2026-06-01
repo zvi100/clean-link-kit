@@ -1,0 +1,38 @@
+{
+  "name": "clean-link-kit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Privacy-friendly open-source toolkit for cleaning tracking parameters from URLs.",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:web": "npm run dev -w apps/web",
+    "dev:extension": "npm run dev -w apps/extension",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "node scripts/clean.mjs"
+  },
+  "keywords": [
+    "url-cleaner",
+    "privacy",
+    "tracking",
+    "utm",
+    "browser-extension",
+    "react",
+    "typescript"
+  ],
+  "author": "Clean Link Kit contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "jsdom": "^26.0.0",
+    "typescript": "^5.8.3"
+  }
+}
