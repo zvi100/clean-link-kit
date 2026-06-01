@@ -13,6 +13,7 @@
     "vite": "^6.1.0"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.300",
     "typescript": "^5.8.3"
   }
 }

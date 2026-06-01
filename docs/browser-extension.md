@@ -21,6 +21,16 @@ npm run build -w apps/extension
 - Copy button
 - Right-click a link and choose Copy clean link
 
+## Permissions
+
+The extension keeps permissions narrow for the first release:
+
+- `contextMenus` adds the right-click clean-copy action.
+- `activeTab` and `scripting` let the extension copy a cleaned link after a user action.
+- `clipboardWrite` lets the popup and context-menu flow write the cleaned link to the clipboard.
+
+The extension does not inject a content script into every website.
+
 ## Design principles
 
 - Keep all cleaning local
