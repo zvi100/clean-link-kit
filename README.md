@@ -22,6 +22,12 @@ clean-link-kit/
 
 Clean Link Kit is in early `0.1.x` development. The core package is covered by unit tests and the first web app and Chrome extension are ready for local use.
 
+## Demo
+
+The web app is published with GitHub Pages:
+
+https://zvi100.github.io/clean-link-kit/
+
 ## Features
 
 - Remove UTM parameters
