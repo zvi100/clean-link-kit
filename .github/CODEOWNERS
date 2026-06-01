@@ -1,0 +1,7 @@
+# Default maintainers for repository changes.
+* @zvi100
+
+# Core URL cleaning rules should always get careful review.
+/packages/core/ @zvi100
+/docs/rules.md @zvi100
+
