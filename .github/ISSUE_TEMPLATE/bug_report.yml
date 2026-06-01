@@ -1,0 +1,56 @@
+name: Bug report
+description: Report something that is not working as expected.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Clean Link Kit.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the bug in a clear and short way.
+      placeholder: I pasted a URL and expected..., but...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps needed to see the problem.
+      placeholder: |
+        1. Open the web app
+        2. Paste this URL...
+        3. Click Clean Link
+    validations:
+      required: true
+
+  - type: input
+    id: url-example
+    attributes:
+      label: Example URL
+      description: If possible, share a safe example URL. Remove private data first.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - Core package
+        - Web app
+        - Browser extension
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, operating system, Node version, or anything else that helps.
+

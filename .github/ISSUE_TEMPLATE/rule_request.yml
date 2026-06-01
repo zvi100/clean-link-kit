@@ -1,0 +1,28 @@
+name: Tracking rule request
+description: Suggest a new tracking parameter rule
+title: "Rule: "
+labels: [rule, good first issue]
+body:
+  - type: input
+    id: parameter
+    attributes:
+      label: Parameter name
+      placeholder: example_param
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example URL
+      description: Paste a safe example URL showing the parameter.
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Suggested mode
+      options:
+        - safe
+        - strict
+    validations:
+      required: true
