@@ -28,6 +28,8 @@ The web app is published with GitHub Pages:
 
 https://zvi100.github.io/clean-link-kit/
 
+![Clean Link Kit web app](assets/screenshots/web-app.png)
+
 ## Features
 
 - Remove UTM parameters
@@ -105,7 +107,6 @@ Then load `apps/extension/dist` in Chrome:
 - Add Firefox manifest support
 - Add import/export for custom rules
 - Improve accessibility checks
-- Add screenshots to this README
 - Add a public demo deployment
 
 ## Community
