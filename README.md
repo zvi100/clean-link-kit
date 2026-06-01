@@ -1,5 +1,10 @@
 # Clean Link Kit
 
+[![CI](https://github.com/zvi100/clean-link-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/zvi100/clean-link-kit/actions/workflows/ci.yml)
+[![Deploy GitHub Pages](https://github.com/zvi100/clean-link-kit/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/zvi100/clean-link-kit/actions/workflows/deploy-pages.yml)
+[![Release](https://img.shields.io/github/v/release/zvi100/clean-link-kit)](https://github.com/zvi100/clean-link-kit/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Clean Link Kit is a privacy-friendly open-source toolkit for cleaning tracking parameters from URLs. It provides a TypeScript core package, a React web app, and a browser extension for creating cleaner, shorter, and safer links before sharing them.
 
 ## Why this exists

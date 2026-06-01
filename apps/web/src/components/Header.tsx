@@ -11,7 +11,7 @@ export function Header({ darkMode, mode, onToggleDarkMode, onModeChange }: Heade
   return (
     <header className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-4 py-6 sm:flex-row sm:items-center sm:justify-between">
       <div>
-        <a href="/" className="inline-flex items-center gap-3 text-xl font-bold tracking-tight sm:text-2xl">
+        <a href={import.meta.env.BASE_URL} className="inline-flex items-center gap-3 text-xl font-bold tracking-tight sm:text-2xl">
           <span className="grid h-10 w-10 place-items-center rounded-2xl bg-slate-950 text-white shadow-sm dark:bg-white dark:text-slate-950">CL</span>
           <span>Clean Link Kit</span>
         </a>
