@@ -85,6 +85,32 @@ describe('cleanUrl', () => {
   });
 
   it.each([
+    [
+      'watch URL with playlist',
+      'https://www.youtube.com/watch?v=dQw4w9WgXcQ&si=abc123&utm_source=copy-link&list=PL123',
+      'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PL123',
+      ['si', 'utm_source']
+    ],
+    [
+      'short URL with timestamp',
+      'https://youtu.be/dQw4w9WgXcQ?ref=twitter&t=42&share=copy',
+      'https://youtu.be/dQw4w9WgXcQ?t=42',
+      ['ref', 'share']
+    ],
+    [
+      'embed URL with start time',
+      'https://www.youtube.com/embed/dQw4w9WgXcQ?start=30&ref_src=twsrc%5Etfw',
+      'https://www.youtube.com/embed/dQw4w9WgXcQ?start=30',
+      ['ref_src']
+    ]
+  ])('removes YouTube share parameters while preserving playback parameters for %s', (_label, input, expected, expectedRemovedKeys) => {
+    const result = cleanUrl(input, { mode: 'strict' });
+
+    expect(result.cleanUrl).toBe(expected);
+    expect(result.removedParams.map((param) => param.key)).toEqual(expectedRemovedKeys);
+  });
+
+  it.each([
     ['id', 'https://example.com/search?id=value', 'https://example.com/search?id=value'],
     ['page', 'https://example.com/search?page=value', 'https://example.com/search?page=value'],
     ['p', 'https://example.com/search?p=value', 'https://example.com/search?p=value'],
