@@ -1,18 +1,26 @@
 import { cleanUrl, type CleanMode, type CleanUrlResult } from '@clean-link-kit/core';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { copyToClipboard } from '../lib/clipboard';
 
 type UrlCleanerProps = {
   mode: CleanMode;
   onClean: (result: CleanUrlResult) => void;
+  onResultChange: (result: CleanUrlResult) => void;
 };
 
 const exampleUrl = 'https://example.com/product?utm_source=newsletter&utm_campaign=sale&fbclid=abc123&gclid=xyz&id=55';
 
-export function UrlCleaner({ mode, onClean }: UrlCleanerProps) {
+export function UrlCleaner({ mode, onClean, onResultChange }: UrlCleanerProps) {
   const [url, setUrl] = useState(exampleUrl);
   const [copied, setCopied] = useState(false);
   const [result, setResult] = useState<CleanUrlResult>(() => cleanUrl(exampleUrl, { mode }));
+
+  useEffect(() => {
+    const nextResult = cleanUrl(url, { mode });
+    setResult(nextResult);
+    setCopied(false);
+    onResultChange(nextResult);
+  }, [mode, onResultChange]);
 
   const removedCountLabel = useMemo(() => {
     if (!result.valid) {
@@ -30,6 +38,7 @@ export function UrlCleaner({ mode, onClean }: UrlCleanerProps) {
     const nextResult = cleanUrl(url, { mode });
     setResult(nextResult);
     setCopied(false);
+    onResultChange(nextResult);
     onClean(nextResult);
   }
 

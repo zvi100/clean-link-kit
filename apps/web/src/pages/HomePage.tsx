@@ -24,8 +24,6 @@ export function HomePage() {
   }, [darkMode]);
 
   function handleClean(result: CleanUrlResult) {
-    setLastResult(result);
-
     if (result.valid && result.changed) {
       setHistory(saveHistoryItem({
         originalUrl: result.originalUrl,
@@ -44,7 +42,7 @@ export function HomePage() {
         onModeChange={setMode}
       />
       <main className="mx-auto grid w-full max-w-6xl gap-6 px-4 pb-12">
-        <UrlCleaner mode={mode} onClean={handleClean} />
+        <UrlCleaner mode={mode} onClean={handleClean} onResultChange={setLastResult} />
         <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
           <RemovedParamsList removedParams={lastResult?.removedParams ?? []} />
           <HistoryList history={history} onClear={() => setHistory(clearHistory())} />
