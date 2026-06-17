@@ -41,6 +41,12 @@ Strict mode includes safe mode and also removes more ambiguous share and referra
 
 - `ref`
 - `ref_src`
+- `tag`
+- `ascsubtag`
+- `linkCode`
+- `camp`
+- `creative`
+- `creativeASIN`
 - `spm`
 - `sc_channel`
 - `share`

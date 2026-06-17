@@ -111,6 +111,36 @@ describe('cleanUrl', () => {
   });
 
   it.each([
+    [
+      'product URL with variant selectors',
+      'https://www.amazon.com/Example-Product/dp/B08N5WRWNW?th=1&psc=1&utm_source=newsletter&srsltid=abc123',
+      'https://www.amazon.com/Example-Product/dp/B08N5WRWNW?th=1&psc=1',
+      ['utm_source', 'srsltid']
+    ],
+    [
+      'search URL with query context',
+      'https://www.amazon.com/s?k=wireless+keyboard&crid=ABC123&utm_medium=email&sprefix=wireless%2Caps%2C150',
+      'https://www.amazon.com/s?k=wireless+keyboard&crid=ABC123&sprefix=wireless%2Caps%2C150',
+      ['utm_medium']
+    ]
+  ])('removes generic tracking from Amazon-style URLs while preserving identifiers for %s', (_label, input, expected, expectedRemovedKeys) => {
+    const result = cleanUrl(input);
+
+    expect(result.cleanUrl).toBe(expected);
+    expect(result.removedParams.map((param) => param.key)).toEqual(expectedRemovedKeys);
+  });
+
+  it('removes Amazon affiliate parameters in strict mode while preserving product selectors', () => {
+    const result = cleanUrl(
+      'https://www.amazon.com/dp/B08N5WRWNW?tag=affiliate-20&linkCode=ll1&ascsubtag=campaign&camp=1789&creative=9325&creativeASIN=B08N5WRWNW&th=1&psc=1',
+      { mode: 'strict' }
+    );
+
+    expect(result.cleanUrl).toBe('https://www.amazon.com/dp/B08N5WRWNW?th=1&psc=1');
+    expect(result.removedParams.map((param) => param.key)).toEqual(['tag', 'linkCode', 'ascsubtag', 'camp', 'creative', 'creativeASIN']);
+  });
+
+  it.each([
     ['id', 'https://example.com/search?id=value', 'https://example.com/search?id=value'],
     ['page', 'https://example.com/search?page=value', 'https://example.com/search?page=value'],
     ['p', 'https://example.com/search?p=value', 'https://example.com/search?p=value'],
