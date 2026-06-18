@@ -6,69 +6,76 @@ Clean Link Kit has two modes.
 
 Safe mode removes high-confidence tracking parameters:
 
-- `utm_*`
-- `fbclid`
-- `gclid`
-- `dclid`
-- `gbraid`
-- `wbraid`
-- `msclkid`
-- `igshid`
-- `mc_cid`
-- `mc_eid`
-- `_hsenc`
-- `_hsmi`
-- `_gl`
-- `_ga`
-- `mkt_tok`
-- `vero_id`
-- `yclid`
-- `ttclid`
-- `twclid`
-- `li_fat_id`
-- `epik`
-- `irclickid`
-- `srsltid`
-- `pk_*`
-- `piwik_*`
-- `mtm_*`
-- `matomo_*`
-- `hsa_*`
+* `utm_*`
+* `fbclid`
+* `gclid`
+* `dclid`
+* `gbraid`
+* `wbraid`
+* `msclkid`
+* `igshid`
+* `mc_cid`
+* `mc_eid`
+* `_hsenc`
+* `_hsmi`
+* `_gl`
+* `_ga`
+* `mkt_tok`
+* `vero_id`
+* `yclid`
+* `ttclid`
+* `twclid`
+* `li_fat_id`
+* `epik`
+* `irclickid`
+* `srsltid`
+* `pk_*`
+* `piwik_*`
+* `mtm_*`
+* `matomo_*`
+* `hsa_*`
 
 ## Strict mode
 
 Strict mode includes safe mode and also removes more ambiguous share and referral parameters:
 
-- `ref`
-- `ref_src`
-- `spm`
-- `sc_channel`
-- `share`
-- `si`
-- `sc_*`
+* `ref`
+* `ref_src`
+* `tag`
+* `ascsubtag`
+* `linkCode`
+* `linkId`
+* `camp`
+* `creative`
+* `creativeASIN`
+* `spm`
+* `sc_channel`
+* `share`
+* `si`
+* `sc_*`
 
 ## Parameters kept by default
 
 The cleaner keeps useful parameters such as:
 
-- `id`
-- `page`
-- `p`
-- `q`
-- `query`
-- `search`
-- `sku`
-- `variant`
-- `product`
-- `category`
-- `collection`
-- `lang`
-- `locale`
-- `currency`
-- `sort`
-- `filter`
-- `color`
-- `size`
+* `id`
+* `page`
+* `p`
+* `q`
+* `query`
+* `search`
+* `sku`
+* `variant`
+* `product`
+* `category`
+* `collection`
+* `lang`
+* `locale`
+* `currency`
+* `sort`
+* `filter`
+* `color`
+* `size`
 
 ## Custom rules
 
