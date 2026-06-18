@@ -20,8 +20,12 @@ copyButton.addEventListener('click', async () => {
     return;
   }
 
-  await navigator.clipboard.writeText(latestResult.cleanUrl);
-  statusElement.textContent = 'Copied clean link.';
+  try {
+    await navigator.clipboard.writeText(latestResult.cleanUrl);
+    statusElement.textContent = 'Copied clean link.';
+  } catch {
+    statusElement.textContent = 'Could not copy. Select the clean link and copy it manually.';
+  }
 });
 
 function renderResult(result: CleanUrlResult) {

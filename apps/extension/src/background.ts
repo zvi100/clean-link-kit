@@ -16,7 +16,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   }
 
   const result = cleanUrl(info.linkUrl, { mode: 'safe' });
-  void copyTextInTab(tab.id, result.cleanUrl);
+  void copyTextInTab(tab.id, result.cleanUrl).catch(() => {
+    console.warn('Clean Link Kit could not copy the cleaned link.');
+  });
 });
 
 async function copyTextInTab(tabId: number, text: string): Promise<void> {
