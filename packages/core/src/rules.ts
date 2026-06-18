@@ -53,6 +53,7 @@ export const EXACT_TRACKING_RULES: TrackingRule[] = [
   { key: 'tag', reason: 'Affiliate tracking parameter', modes: STRICT_MODES },
   { key: 'ascsubtag', reason: 'Affiliate subtag tracking parameter', modes: STRICT_MODES },
   { key: 'linkcode', reason: 'Marketplace affiliate link parameter', modes: STRICT_MODES },
+  { key: 'linkid', reason: 'Marketplace affiliate link identifier', modes: STRICT_MODES },
   { key: 'camp', reason: 'Marketplace affiliate campaign parameter', modes: STRICT_MODES },
   { key: 'creative', reason: 'Marketplace affiliate creative parameter', modes: STRICT_MODES },
   { key: 'creativeasin', reason: 'Marketplace affiliate creative parameter', modes: STRICT_MODES },
