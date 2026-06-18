@@ -56,7 +56,7 @@ export const EXACT_TRACKING_RULES: TrackingRule[] = [
   { key: 'linkid', reason: 'Marketplace affiliate link identifier', modes: STRICT_MODES },
   { key: 'camp', reason: 'Marketplace affiliate campaign parameter', modes: STRICT_MODES },
   { key: 'creative', reason: 'Marketplace affiliate creative parameter', modes: STRICT_MODES },
-  { key: 'creativeasin', reason: 'Marketplace affiliate creative parameter', modes: STRICT_MODES },
+  { key: 'creativeasin', reason: 'Marketplace affiliate creative ASIN parameter', modes: STRICT_MODES },
   { key: 'spm', reason: 'Marketplace tracking parameter', modes: STRICT_MODES },
   { key: 'sc_channel', reason: 'Social campaign tracking parameter', modes: STRICT_MODES },
   { key: 'share', reason: 'Share tracking parameter', modes: STRICT_MODES },
