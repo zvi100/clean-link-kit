@@ -132,12 +132,12 @@ describe('cleanUrl', () => {
 
   it('removes Amazon affiliate parameters in strict mode while preserving product selectors', () => {
     const result = cleanUrl(
-      'https://www.amazon.com/dp/B08N5WRWNW?tag=affiliate-20&linkCode=ll1&ascsubtag=campaign&camp=1789&creative=9325&creativeASIN=B08N5WRWNW&th=1&psc=1',
+      'https://www.amazon.com/dp/B08N5WRWNW?tag=affiliate-20&linkCode=ll1&linkId=123456&ascsubtag=campaign&camp=1789&creative=9325&creativeASIN=B08N5WRWNW&th=1&psc=1',
       { mode: 'strict' }
     );
 
     expect(result.cleanUrl).toBe('https://www.amazon.com/dp/B08N5WRWNW?th=1&psc=1');
-    expect(result.removedParams.map((param) => param.key)).toEqual(['tag', 'linkCode', 'ascsubtag', 'camp', 'creative', 'creativeASIN']);
+    expect(result.removedParams.map((param) => param.key)).toEqual(['tag', 'linkCode', 'linkId', 'ascsubtag', 'camp', 'creative', 'creativeASIN']);
   });
 
   it.each([
